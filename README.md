@@ -1,4 +1,4 @@
-# HB-RC-12-EP
+# HB-RC-12-EP(-C/-BW)
 
 <img width=400 src="https://raw.githubusercontent.com/jp112sdl/HB-RC-12-EP/master/Images/Bild.jpeg"></img>
 
