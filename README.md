@@ -25,4 +25,8 @@
   - [GxEPD](https://github.com/ZinggJM/GxEPD) 
   - [Adafruit-GFX](https://github.com/adafruit/Adafruit-GFX-Library)
   - [U8g2_for_Adafruit_GFX](https://github.com/olikraus/U8g2_for_Adafruit_GFX)
+  
+  ## Forum
+  Thread zum Projekt im Homematic Forum:</br>
+  https://homematic-forum.de/forum/viewtopic.php?f=76&t=50160&p=503115#p503115
 
