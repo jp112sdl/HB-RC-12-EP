@@ -404,6 +404,7 @@ void updateDisplay() {
 
 void updateDisplay(bool doit) {
   if (doit) {
+    u8g2Fonts.begin(display);
     mustRefreshDisplay = false;
 #ifndef NDISPLAY
     display.drawPaged(updateDisplay);
