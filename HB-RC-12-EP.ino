@@ -10,8 +10,8 @@
 //////////////////// DISPLAY DEFINITIONS /////////////////////////////////////
 #include <GxEPD.h>
 #if DISPLAY_COLORED == 1
-//#include <GxGDEW029Z10/GxGDEW029Z10.h>  // 2.9" b/w/r
-#include <GxGDEW026Z39/GxGDEW026Z39.h>    // 2.6" b/w/r
+#include <GxGDEW029Z10/GxGDEW029Z10.h>  // 2.9" b/w/r
+//#include <GxGDEW026Z39/GxGDEW026Z39.h>    // 2.6" b/w/r
 #else
 #include <GxGDEW029T5/GxGDEW029T5.h>      // 2.9" b/w
 #endif
