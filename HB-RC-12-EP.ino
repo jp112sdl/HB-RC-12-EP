@@ -5,7 +5,7 @@
 //- -----------------------------------------------------------------------------------------------------------------------
 //#define NDISPLAY
 
-#define DISPLAY_COLORED   1
+#define DISPLAY_COLORED   1       // 1 = Farbdisplay; 0 = schwarz/weiß Display
 
 //////////////////// DISPLAY DEFINITIONS /////////////////////////////////////
 #include <GxEPD.h>
