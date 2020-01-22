@@ -126,6 +126,18 @@ class Hal: public BaseHal {
     }
 } hal;
 
+void updateDisplay(bool doit) {
+  if (doit) {
+    u8g2Fonts.begin(display);
+    mustRefreshDisplay = false;
+#ifndef NDISPLAY
+    display.drawPaged(updateDisplay);
+#else
+    DPRINTLN(F("display.drawPaged(updateDisplay);"));
+#endif
+  }
+}
+
 class RefreshDisplayAlarm : public Alarm {
 public:
   RefreshDisplayAlarm () :  Alarm(0)  {}
@@ -399,17 +411,5 @@ void updateDisplay() {
     leftTextPos = centerPosition(viewText.c_str());
     u8g2Fonts.setCursor(leftTextPos, ((i / 2) * 49) + ((i % 2 == 0) ? 21 : 43));
     u8g2Fonts.print(viewText);
-  }
-}
-
-void updateDisplay(bool doit) {
-  if (doit) {
-    u8g2Fonts.begin(display);
-    mustRefreshDisplay = false;
-#ifndef NDISPLAY
-    display.drawPaged(updateDisplay);
-#else
-    DPRINTLN(F("display.drawPaged(updateDisplay);"));
-#endif
   }
 }
