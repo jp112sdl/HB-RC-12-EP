@@ -20,10 +20,10 @@
 #include "U8G2_FONTS_GFX.h"
 #include "Icons.h"
 
-#define GxRST_PIN  14
-#define GxBUSY_PIN 11
-#define GxDC_PIN   12
-#define GxCS_PIN   17
+#define GxRST_PIN     22 // PC6
+#define GxBUSY_PIN    23 // PC7
+#define GxDC_PIN      21 // PC5
+#define GxCS_PIN      20 // PC4
 #define DISPLAY_ROTATE     0 // 0 = 0° , 1 = 90°, 2 = 180°, 3 = 270°
 
 GxIO_Class io(SPI, GxCS_PIN, GxDC_PIN, GxRST_PIN);
@@ -42,26 +42,28 @@ U8G2_FONTS_GFX u8g2Fonts(display);
 #include <MultiChannelDevice.h>
 #include <Remote.h>
 
-#define CC1101_CS_PIN       4   // PB4
-#define CC1101_GDO0_PIN     2   // PB2
-//#define CC1101_SCK_PIN      7   // PB7
-//#define CC1101_MOSI_PIN     5   // PB5
-//#define CC1101_MISO_PIN     6   // PB6
-#define CONFIG_BUTTON_PIN  15   // PD7
-#define LED_PIN_1          10   // PD2
-#define LED_PIN_2          13   // PD5
-#define BTN01_PIN          A0 //A0   // PA0
-#define BTN02_PIN          20 //A1   // PA1
-#define BTN03_PIN          A1 //A2   // PA2
-#define BTN04_PIN          21 //A3   // PA3
-#define BTN05_PIN          A2 //A4   // PA4
-#define BTN06_PIN          22 //A5   // PA5
-#define BTN07_PIN          A3 //A6   // PA6
-#define BTN08_PIN          23 //A7   // PA7
-#define BTN09_PIN          A4 //23   // PC7
-#define BTN10_PIN          A6 //22   // PC6
-#define BTN11_PIN          A5 //21   // PC5
-#define BTN12_PIN          A7 //20   // PC4
+#define CC1101_CS_PIN       4 // PB4
+#define CC1101_GDO0_PIN     2 // PB2
+//#define CC1101_SCK_PIN      7 // PB7
+//#define CC1101_MOSI_PIN     5 // PB5
+//#define CC1101_MISO_PIN     6 // PB6
+
+#define CONFIG_BUTTON_PIN   1   // PB1
+#define LED_PIN_1          19   // PC3
+#define LED_PIN_2          19   // PC3
+
+#define BTN01_PIN          A5 // PA5   Key Pattern
+#define BTN02_PIN          18 // PC2     1 --- 2
+#define BTN03_PIN          A4 // PA4     3 --- 4
+#define BTN04_PIN          A6 // PA6     5 --- 6
+#define BTN05_PIN          A3 // PA3     7 --- 8
+#define BTN06_PIN          15 // PD7     9 --- 10
+#define BTN07_PIN          A2 // PA2    11 --- 12
+#define BTN08_PIN          14 // PD6
+#define BTN09_PIN          A1 // PA1
+#define BTN10_PIN          13 // PD5
+#define BTN11_PIN          A0 // PA0
+#define BTN12_PIN          12 // PD4
 
 #define TEXT_LENGTH        10
 #define CHANNEL_COUNT      12
