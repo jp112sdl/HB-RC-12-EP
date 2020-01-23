@@ -50,7 +50,7 @@ U8G2_FONTS_GFX u8g2Fonts(display);
 
 #define CONFIG_BUTTON_PIN   1   // PB1
 #define LED_PIN_1          19   // PC3
-#define LED_PIN_2          19   // PC3
+//#define LED_PIN_2          NC   // uncomment if you use DualStatusLed
 
 #define BTN01_PIN          A5 // PA5   Key Pattern
 #define BTN02_PIN          18 // PC2     1 --- 2
@@ -106,7 +106,11 @@ bool mustRefreshDisplay = false;
 */
 typedef LibSPI<CC1101_CS_PIN> SPIType;
 typedef Radio<SPIType, CC1101_GDO0_PIN> RadioType;
-typedef DualStatusLed<LED_PIN_1, LED_PIN_2> LedType;
+#ifdef LED_PIN_2
+  typedef DualStatusLed<LED_PIN_1, LED_PIN_2> LedType;
+#else
+  typedef StatusLed<LED_PIN_1> LedType;
+#endif
 typedef AskSin<LedType, BatterySensor, RadioType> BaseHal;
 
 class Hal: public BaseHal {
