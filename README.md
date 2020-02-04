@@ -26,7 +26,12 @@
   - [Adafruit-GFX](https://github.com/adafruit/Adafruit-GFX-Library)
   - [U8g2_for_Adafruit_GFX](https://github.com/olikraus/U8g2_for_Adafruit_GFX)
   
-  ## Forum
-  Thread zum Projekt im Homematic Forum:</br>
-  https://homematic-forum.de/forum/viewtopic.php?f=76&t=50160&p=503115#p503115
+ ## Forum
+ Thread zum Projekt im Homematic Forum:</br>
+ https://homematic-forum.de/forum/viewtopic.php?f=76&t=50160&p=503115#p503115
+
+ ## PCB 
+ TomMajor stellt ein passendes PCB zur Verfügung</br>
+ https://github.com/TomMajor/SmartHome/tree/master/PCB/HB-RC-12-EP
+
 
