@@ -26,7 +26,18 @@
   - [Adafruit-GFX](https://github.com/adafruit/Adafruit-GFX-Library)
   - [U8g2_for_Adafruit_GFX](https://github.com/olikraus/U8g2_for_Adafruit_GFX)
   
-  ## Forum
-  Thread zum Projekt im Homematic Forum:</br>
-  https://homematic-forum.de/forum/viewtopic.php?f=76&t=50160&p=503115#p503115
+ ## Forum
+ Thread zum Projekt im Homematic Forum:</br>
+ https://homematic-forum.de/forum/viewtopic.php?f=76&t=50160&p=503115#p503115
+
+ ## PCB 
+ TomMajor stellt ein passendes PCB zur Verfügung</br>
+ https://github.com/TomMajor/SmartHome/tree/master/PCB/HB-RC-12-EP
+ 
+ ## mögliche Probleme im Betrieb
+ - Nach jeder Übertragung der Konfigurationsparameter, wird im Anschluss das Display aktualisiert.
+  Dies dauert ein paar Sekunden. Auch beim Setzen oder Löschen von Direktverbindungen, was man mit "Config" bestätigen muss. In dieser Zeit reagiert die Fernbedienung auf keine weiteren Tasteneingaben.
+ - Bei Direktverknüpfungen mit Geräten, die über BURST kommunizieren, bspw. Batterieaktoren und Heizkörperthermostate, kann es bei "longpress" u.U. auftreten, dass die Fernbedienung zyklisch weiter sendet. Hier muss in den Geräteeinstellungen am jeweiligen Kanal die "Mindestdauer für langen Tastendruck" erhöht werden.</br>1.8 Sekunden ist ein guter Startwert, den man iterativ nach unten korrigieren kann.
+ 
+
 
