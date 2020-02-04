@@ -35,9 +35,9 @@
  https://github.com/TomMajor/SmartHome/tree/master/PCB/HB-RC-12-EP
  
  ## mögliche Probleme im Betrieb
- - Nach jeder Übertragung, der Konfgurationsparameter, wird im Anschluss das Display aktualisiert.
+ - Nach jeder Übertragung der Konfgurationsparameter, wird im Anschluss das Display aktualisiert.
   Dies dauert ein paar Sekunden. Auch beim Löschen von Direktverbindungen, was man mit "Config" bestätigen muss. In dieser Zeit reagiert die Fernbedienung auf keine weiteren Tasteneingaben.
- - Bei Direktverknüpfungen mit Geräten, die über BURST kommunizieren, bsw. Batterieaktoren und Heizkörperthermostate, kann es bei "longpress" u.U. auftreten, dass die Fernbedienung zyklisch weiter sendet. Hier muss in den Geräteeinstellungen am jeweiligen Kanal die "Mindestdauer für langen Tastendruck" erhöht werden. 1.8 Sekunden ist ein guter Startwert, den man iterativ nach unten korrigieren kann.
+ - Bei Direktverknüpfungen mit Geräten, die über BURST kommunizieren, bspw. Batterieaktoren und Heizkörperthermostate, kann es bei "longpress" u.U. auftreten, dass die Fernbedienung zyklisch weiter sendet. Hier muss in den Geräteeinstellungen am jeweiligen Kanal die "Mindestdauer für langen Tastendruck" erhöht werden. 1.8 Sekunden ist ein guter Startwert, den man iterativ nach unten korrigieren kann.
  
 
 
