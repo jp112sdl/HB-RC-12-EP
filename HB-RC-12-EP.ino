@@ -240,7 +240,7 @@ public:
       }
       uint8_t d = number() - 1;
       DisplayLines[d].ShowLine      = this->getList1().showLine();
-      DisplayLines[d].IconNumber    = this->getList1().iconNumber();
+      DisplayLines[d].IconNumber    = min(this->getList1().iconNumber(), ICON_COUNT + 2); // 0 = no icon, 1 = arrow, 2... icons from Icons.h
       DisplayLines[d].TextBold      = this->getList1().textBold();
       DisplayLines[d].TextContent   = this->getList1().textContent();
 #if DISPLAY_COLORED == 1
