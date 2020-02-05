@@ -1,6 +1,7 @@
 # HB-RC-12-EP(-C/-BW)
 
-<img width=400 src="https://raw.githubusercontent.com/jp112sdl/HB-RC-12-EP/master/Images/Bild.jpeg"></img>
+<img width=400 src="https://homematic-forum.de/forum/download/file.php?id=70231&mode=view"></img><br/>
+(c) [Alveran81](https://github.com/Alveran81)
 
 ## Parts
 - ATMega **1284P** (für den [Prototypen](https://raw.githubusercontent.com/jp112sdl/HB-RC-12-EP/master/Images/Bild%202.jpeg) habe ich die [HM-ES-PWMSw1-Pl_GosundSP1-Platine](https://raw.githubusercontent.com/stan23/HM-ES-PMSw1-Pl_GosundSP1/master/Bilder/Platine_V2_bestückt.jpg) missbraucht ^^)
