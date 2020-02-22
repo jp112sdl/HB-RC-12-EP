@@ -50,7 +50,8 @@ U8G2_FONTS_GFX u8g2Fonts(display);
 
 #define CONFIG_BUTTON_PIN   1   // PB1
 #define LED_PIN_1          19   // PC3
-//#define LED_PIN_2          NC   // uncomment if you use DualStatusLed
+//#define LED_PIN_2          10   // uncomment if you use DualStatusLed, TomMajor PCB 1.00, LED2 on INT0
+//#define LED_PIN_2          0    // uncomment if you use DualStatusLed, TomMajor PCB 1.01, LED2 on PB0
 
 #define BTN01_PIN          A5 // PA5   Key Pattern
 #define BTN02_PIN          18 // PC2     1 --- 2
