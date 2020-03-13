@@ -341,6 +341,7 @@ void setup() {
   sdev.initDone();
 
   display.init(57600);
+  display.setRotation(DISPLAY_ROTATE);
   first = false;
   DPRINTLN("setup done.");
 }
