@@ -1,4 +1,4 @@
-# HB-RC-12-EP(-C/-BW) [![Build Status](https://travis-ci.org/jp112sdl/HB-RC-12-EP.svg?branch=master)](https://travis-ci.org/jp112sdl/HB-RC-12-EP)
+# HB-RC-12-EP(-C/-BW) [![Build Status](https://travis-ci.com/jp112sdl/HB-RC-12-EP.svg?branch=master)](https://travis-ci.com/jp112sdl/HB-RC-12-EP)
 
 <img width=400 src="https://homematic-forum.de/forum/download/file.php?id=70231&mode=view"></img><br/>
 (c) [Alveran81](https://github.com/Alveran81)
