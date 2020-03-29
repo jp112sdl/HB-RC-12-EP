@@ -2,7 +2,7 @@
 language: c++
 env:
   global:
-    - IDE_VERSION=1.8.1
+    - IDE_VERSION=1.8.12
     - BOARD="MightyCore:avr:1284:pinout=standard,variant=modelP,LTO=Os,clock=8MHz_internal"
     - SKETCH="HB-RC-12-EP.ino"
 before_install:
@@ -15,7 +15,7 @@ install:
   - ln -s $PWD $HOME/Arduino/libraries/.
   - arduino --pref "update.check=false" --save-prefs
   - arduino --pref "boardsmanager.additional.urls=https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json" --save-prefs
-  - arduino --install-boards MightyCore:avr:2.0.1
+  - arduino --install-boards MightyCore:avr:2.0.4
   - git clone --branch=master https://github.com/pa-pa/AskSinPP.git $HOME/arduino-ide/libraries/AskSinPP
   - git clone https://github.com/GreyGnome/EnableInterrupt $HOME/arduino-ide/libraries/EnableInterrupt
   - git clone https://github.com/rocketscream/Low-Power.git $HOME/arduino-ide/libraries/Low-Power
@@ -23,8 +23,7 @@ install:
   - git clone https://github.com/olikraus/U8g2_for_Adafruit_GFX.git $HOME/arduino-ide/libraries/U8g2_for_Adafruit_GFX
   - git clone https://github.com/ZinggJM/GxEPD.git $HOME/arduino-ide/libraries/GxEPD
 script:
-  - arduino -v --verify --board $BOARD $PWD/$SKETCH
+  - arduino --verify --board $BOARD $PWD/$SKETCH
 notifications:
   email:
-    on_success: always
     on_failure: always
