@@ -1,29 +1,36 @@
-
 language: c++
 env:
   global:
-    - IDE_VERSION=1.8.1
-    - BOARD="MightyCore:avr:1284:pinout=standard,variant=modelP,LTO=Os,clock=8MHz_internal"
-    - SKETCH="HB-RC-12-EP.ino"
+  - IDE_VERSION=1.8.1
+  - BOARD="MightyCore:avr:1284:pinout=standard,variant=modelP,LTO=Os,clock=8MHz_internal"
+  - SKETCH="HB-RC-12-EP.ino"
 before_install:
-  - wget http://downloads.arduino.cc/arduino-$IDE_VERSION-linux64.tar.xz
-  - tar xf arduino-$IDE_VERSION-linux64.tar.xz
-  - mv arduino-$IDE_VERSION $HOME/arduino-ide
-  - export PATH=$PATH:$HOME/arduino-ide
+- wget http://downloads.arduino.cc/arduino-$IDE_VERSION-linux64.tar.xz
+- tar xf arduino-$IDE_VERSION-linux64.tar.xz
+- mv arduino-$IDE_VERSION $HOME/arduino-ide
+- export PATH=$PATH:$HOME/arduino-ide
 install:
-  - mkdir -p $HOME/Arduino/libraries
-  - ln -s $PWD $HOME/Arduino/libraries/.
-  - arduino --pref "update.check=false" --save-prefs
-  - arduino --pref "boardsmanager.additional.urls=https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json" --save-prefs
-  - arduino --install-boards MightyCore:avr:2.0.4
-  - git clone --branch=master https://github.com/pa-pa/AskSinPP.git $HOME/arduino-ide/libraries/AskSinPP
-  - git clone https://github.com/GreyGnome/EnableInterrupt $HOME/arduino-ide/libraries/EnableInterrupt
-  - git clone https://github.com/rocketscream/Low-Power.git $HOME/arduino-ide/libraries/Low-Power
-  - git clone https://github.com/adafruit/Adafruit-GFX-Library.git $HOME/arduino-ide/libraries/Adafruit-GFX-Library
-  - git clone https://github.com/olikraus/U8g2_for_Adafruit_GFX.git $HOME/arduino-ide/libraries/U8g2_for_Adafruit_GFX
-  - git clone https://github.com/ZinggJM/GxEPD.git $HOME/arduino-ide/libraries/GxEPD
+- mkdir -p $HOME/Arduino/libraries
+- ln -s $PWD $HOME/Arduino/libraries/.
+- arduino --pref "update.check=false" --save-prefs
+- arduino --pref "boardsmanager.additional.urls=https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json"
+  --save-prefs
+- arduino --install-boards MightyCore:avr:2.0.4
+- git clone --branch=master https://github.com/pa-pa/AskSinPP.git $HOME/arduino-ide/libraries/AskSinPP
+- git clone https://github.com/GreyGnome/EnableInterrupt $HOME/arduino-ide/libraries/EnableInterrupt
+- git clone https://github.com/rocketscream/Low-Power.git $HOME/arduino-ide/libraries/Low-Power
+- git clone https://github.com/adafruit/Adafruit-GFX-Library.git $HOME/arduino-ide/libraries/Adafruit-GFX-Library
+- git clone https://github.com/olikraus/U8g2_for_Adafruit_GFX.git $HOME/arduino-ide/libraries/U8g2_for_Adafruit_GFX
+- git clone https://github.com/ZinggJM/GxEPD.git $HOME/arduino-ide/libraries/GxEPD
 script:
-  - arduino --verify --board $BOARD $PWD/$SKETCH
+- arduino --verify --board $BOARD $PWD/$SKETCH
 notifications:
+  pushover:
+    on_success: always
+    on_failure: always
+    api_key:
+      secure: UR56jE5Sx8lxqzO0QR+OTEQ1uoJPJl8Fqaf1RvEBU+hDDCj9cvFdnRcGUHetlwjN9RKJMiMPS6LhFevueEuORQGhEQ8ydVddI5PYpJNKhHIF9p6po1uWkMab1fiK357Xk8yapHk01Ye97tAtZ6EqFZGQ3GgsDHO66AKj2VMz50vJK8n9/toRkueYNNpzF3i5agMnojQUTX3oICLx0ghmZ0fEWf08PUYjIdvWOw4Xd57TKjsBBTY9gPZmNVrIVAJNRmmi2zqI//RJbF1QD8mMKc8xAB+sS1tckqhlQNEDLX2blZ76ijTG3ntXd0gypj5EPBbmAjgKUsUgDIr8HbWR1OEOYvh1sKYqse/O8/wL4N7qVK5QYiAtVMmDVcdvJBsiGhqxaHIeTY61VBoMNy0C6PMUqyMYbOET+0eUJbKOOMu+YSXNbkuoGMJBmwNXOKKEnJ/owghVrZleX7lTRvpTxJXQ2Af1kmAKqrsP9IW7JqxDcXt/sn++lQNfPoSoG30NVI0BNsktuJcOoqzQkhEdLKpsVnGJDDhOp6rPMTopJmZ64jdr946tf8eHpXwg6zNOaTC6xj0+sGOT5viKNraJtv0ULDtxVPiPHcn7WsNyNxuXN5AkykyYjURj+/Eu2Sg4ouR6aiUu/KhPTwcMFke302TL35/qk0PQtc1A0UeW/Js=
+    users:
+    - secure: VFQjEViUtoeotnzplEHMRLlXy/kW1+WPnduRbaWj4rW9mId3p1PMGO1Yai+2vIZ4WXpAUSm9e95/blcQOpdPxSxKq825fbqGB4DbTumT47DDpbZ/dEuRENGEsLKi6qgCQcCfPfYirT23r3c8cwPngl+ha2ECeiEEdxwZBIHuRQuIha0cvdH+gSAL11JslmXGrfHf/nBf1tB9g15z6Qb1g4HUgWjY68ElauzxShN2riS7Uf5xt3F50kU32TmlOaErsV8rqVjIWj31sE+0rO+tMa6pIhnX044HVG0ySLIV84VVgxKzZLacrpYJoAeRJ3uOfGbbqlqP4IYPWJt+Y8MaBQZIM+jU0m8/2yLlmFiaiCpRHFCoYONIPHfpl2qGlHQzv+DlxClTqO4L3JwL1tj5Dj5/TQdI8ICk0Xc7eYlcEYj1gwvsN/Q80ZJDFHJ2fHCiL4IMT6NxPpGAovvVojaHHioM8LdK4OHS4juweegtr3pTRu/R9cRVXfJTwuSlrqKrrlAdZMCdwoYY0vPyZbpsCMjdksKqGxngsLvnK8Wtfblr5JbUIFkxmSdOBni07+kbeEX2Kn85R9D+S4MS2iOPRIQ5pN1Jaw+WucFJZBwCMp61wO0wUhc9cEzBEYTVF5u5YzSrXIfpB+10S7FMaZrBShXpn4fBstpd5Su9cf+NNfY=
   email:
     on_failure: always
