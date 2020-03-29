@@ -16,7 +16,7 @@ install:
   - arduino --pref "update.check=false" --save-prefs
   - arduino --pref "boardsmanager.additional.urls=https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json" --save-prefs
   - arduino --install-boards MightyCore:avr:2.0.1
-  - git clone --branch=master https://github.com/pa-pa/AskSinPP.git /usr/local/share/arduino/libraries/AskSinPP
+  - git clone --branch=master https://github.com/pa-pa/AskSinPP.git $HOME/arduino-ide/libraries/AskSinPP
   - git clone https://github.com/GreyGnome/EnableInterrupt $HOME/arduino-ide/libraries/EnableInterrupt
   - git clone https://github.com/rocketscream/Low-Power.git $HOME/arduino-ide/libraries/Low-Power
   - git clone https://github.com/adafruit/Adafruit-GFX-Library.git $HOME/arduino-ide/libraries/Adafruit-GFX-Library
