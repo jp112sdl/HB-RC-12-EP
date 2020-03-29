@@ -2,7 +2,7 @@
 language: c++
 env:
   global:
-    - IDE_VERSION=1.8.10
+    - IDE_VERSION=1.8.1
     - BOARD="MightyCore:avr:1284:pinout=standard,variant=modelP,LTO=Os,clock=8MHz_internal"
     - SKETCH="HB-RC-12-EP.ino"
 before_install:
