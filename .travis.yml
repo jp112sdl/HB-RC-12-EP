@@ -20,6 +20,7 @@ install:
 - git clone https://github.com/GreyGnome/EnableInterrupt $HOME/arduino-ide/libraries/EnableInterrupt
 - git clone https://github.com/rocketscream/Low-Power.git $HOME/arduino-ide/libraries/Low-Power
 - git clone https://github.com/adafruit/Adafruit-GFX-Library.git $HOME/arduino-ide/libraries/Adafruit-GFX-Library
+- git clone https://github.com/adafruit/Adafruit_BusIO.git $HOME/arduino-ide/libraries/Adafruit_BusIO
 - git clone https://github.com/olikraus/U8g2_for_Adafruit_GFX.git $HOME/arduino-ide/libraries/U8g2_for_Adafruit_GFX
 - git clone https://github.com/ZinggJM/GxEPD.git $HOME/arduino-ide/libraries/GxEPD
 script:
