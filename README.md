@@ -28,6 +28,7 @@
   - [EnableInterrupt](https://github.com/GreyGnome/EnableInterrupt)
   - [GxEPD](https://github.com/ZinggJM/GxEPD) 
   - [Adafruit-GFX](https://github.com/adafruit/Adafruit-GFX-Library)
+  - [Adafruit-BusIO](https://github.com/adafruit/Adafruit_BusIO)
   - [U8g2_for_Adafruit_GFX](https://github.com/olikraus/U8g2_for_Adafruit_GFX)
   
  ## Forum
