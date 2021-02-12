@@ -3,6 +3,8 @@
 // 2016-10-31 papa Creative Commons - http://creativecommons.org/licenses/by-nc-sa/3.0/de/
 // 2019-04-03 jp112sdl Creative Commons - http://creativecommons.org/licenses/by-nc-sa/3.0/de/
 //- -----------------------------------------------------------------------------------------------------------------------
+// ci-test=yes board=1284pSTD aes=no
+
 //#define NDISPLAY
 
 #define DISPLAY_COLORED   1       // 1 = Farbdisplay; 0 = schwarz/weiß Display
