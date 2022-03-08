@@ -16,6 +16,7 @@
 //#include <GxGDEW026Z39/GxGDEW026Z39.h>    // 2.6" b/w/r
 #else
 #include <GxGDEW029T5/GxGDEW029T5.h>      // 2.9" b/w
+//#include <GxGDEW029T94/GxGDEW029T94.h>  // 2.9" b/w
 #endif
 #include <GxIO/GxIO_SPI/GxIO_SPI.h>
 #include <GxIO/GxIO.h>
